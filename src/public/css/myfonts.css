@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Melany Lane";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/melany_lane_bold.otf");
+}
+@font-face {
+  font-family: "Lato Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/lato_light_regular.ttf");
+}
+@font-face {
+  font-family: "Lato Light";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/lato_light_bold.ttf");
+}
+@font-face {
+  font-family: "Underland";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/melany_lane_bold.otf");
+}
+@font-face {
+  font-family: "Chalisa Oktavia";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/melany_lane_bold.otf");
+}
+@font-face {
+  font-family: "Yessy";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/melany_lane_bold.otf");
+}
+.font-melany-lane {
+  font-family: "Melany Lane";
+}
+
+.font-lato-light {
+  font-family: "Lato Light";
+}
+
+.font-lato-light-bold {
+  font-family: "Lato Light";
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=myfonts.css.map */

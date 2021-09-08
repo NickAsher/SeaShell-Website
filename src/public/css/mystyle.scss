@@ -1,0 +1,18 @@
+.header{
+  li{
+    display: inline;
+  }
+
+  li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  a:focus, a:active, a:hover{
+    text-decoration: none;
+    color: #e45f74 ;
+    cursor : pointer;
+  }
+}

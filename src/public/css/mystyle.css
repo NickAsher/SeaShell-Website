@@ -1,0 +1,16 @@
+.header li {
+  display: inline;
+}
+.header li a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.header a:focus, .header a:active, .header a:hover {
+  text-decoration: none;
+  color: #e45f74;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=mystyle.css.map */
