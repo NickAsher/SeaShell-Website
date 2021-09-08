@@ -24,10 +24,10 @@ body {
     color: #333
 }
 
-h1, h2, h3, h4, h5, h6, p, a, ul, span, li, img, inpot, button {
-    margin: 0;
-    padding: 0
-}
+/*h1, h2, h3, h4, h5, h6, p, a, ul, span, li, img, inpot, button {*/
+    /*margin: 0;*/
+    /*padding: 0*/
+/*}*/
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
@@ -89,9 +89,9 @@ b {
     font-weight: 500
 }
 
-img {
-    width: 100%
-}
+/*img {*/
+    /*width: 100%*/
+/*}*/
 
 li {
     list-style: none;
