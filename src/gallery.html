@@ -64,26 +64,57 @@
         </ul>
     </div>
 
-    <div id="notification-header" class="center-text py-3" style="background-color: #efefef;">
-        All the pictures on our website are clicked by us, not taken from the internet
-    </div>
-
 
     <div class="gallery-container">
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/tenting_bengali_5.jpg" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/gallery_lawn_5.jpg" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/tenting_orangewhite_7.jpg" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/gallery_extra_1.jpg" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/heading_events_5.jpg" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/tenting_maroongold_4.jpg" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/lighting_7.jpg" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/tenting_bengali_3.jpg" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/gallery_tenting_2.JPG" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/tenting_maroongold_11.jpg" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/tenting_maroongold_8.jpg" ></div>
-        <div class="gallery-item"><img class="gallery-image img-fluid" src="public/images/gallery/tenting_orangewhite_6.jpg" ></div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_bengali_5.jpg" data-detail-image="public/images/gallery/tenting_bengali_5.jpg">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/gallery_lawn_5.jpg" data-detail-image="public/images/gallery/gallery_lawn_5.jpg">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_orangewhite_7.jpg" data-detail-image="public/images/gallery/tenting_orangewhite_7.jpg">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/gallery_extra_1.jpg" data-detail-image="public/images/gallery/gallery_extra_1.jpg">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/heading_events_5.jpg" data-detail-image="public/images/gallery/heading_events_5.jpg">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_maroongold_4.jpg" data-detail-image="public/images/gallery/tenting_maroongold_4.jpg">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/lighting_7.jpg" data-detail-image="public/images/gallery/lighting_7.jpg">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_bengali_3.jpg" data-detail-image="public/images/gallery/tenting_bengali_3.jpg">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/gallery_tenting_2.JPG" data-detail-image="public/images/gallery/gallery_tenting_2.JPG">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_maroongold_11.jpg" data-detail-image="public/images/gallery/tenting_maroongold_11.jpg">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_maroongold_8.jpg" data-detail-image="public/images/gallery/tenting_maroongold_8.jpg">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_orangewhite_6.jpg" data-detail-image="public/images/gallery/tenting_orangewhite_6.jpg">
+        </div>
     </div>
 
+
+
+    <div id="gallery_detail_container" class="modal fade"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="gallery-detail-item" style="background-color: #ddd">
+                    <img class="gallery-detail-image img-fluid" alt="  Loading Image..." data-bs-dismiss="modal">
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -149,7 +180,15 @@
 
     </div>
 
+    <script src="public/lib/jquery/jquery.min.js" ></script>
     <script src="public/lib/bootstrap-5.0/js/bootstrap.bundle.min.js" ></script>
     <script src="public/lib/fontawesome-5.15.4/js/all.min.js"></script>
+    <script>
+        $('.gallery-image').click(function(){
+            let detailImagePath = $(this).attr('data-detail-image') ;
+            $('.gallery-detail-image').attr('src', detailImagePath) ;
+            $('#gallery_detail_container').modal('show') ;
+        }) ;
+    </script>
 </body>
 </html>

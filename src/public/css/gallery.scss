@@ -25,3 +25,14 @@
   }
 
 }
+
+
+/** When you have long content, a scrollbar appears by default on most desktop browsers .
+    But when you trigger a modal view in page, it triggers the scroll bar to disappear.
+    This is caused by this code in bootstrap   .modal-open {overflow: hidden; }
+    It's an annoying effect because the background page starts moving when the modal moves in / disappears.
+     To override this annoying effect, i use the following code
+  **/
+.modal-open {
+  overflow: scroll !important;
+}
