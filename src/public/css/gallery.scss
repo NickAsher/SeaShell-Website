@@ -27,6 +27,15 @@
 }
 
 
+.gallery-navigation-btn{
+  position: absolute;   //needed to give the buttons absolute position inside the div
+  color: #fff;
+  font-size: 30px;
+  border: 2px #000;
+  background-color: rgba(0,0,0,0.5);
+}
+
+
 /** When you have long content, a scrollbar appears by default on most desktop browsers .
     But when you trigger a modal view in page, it triggers the scroll bar to disappear.
     This is caused by this code in bootstrap   .modal-open {overflow: hidden; }

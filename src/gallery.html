@@ -67,40 +67,40 @@
 
     <div class="gallery-container">
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_bengali_5.jpg" data-detail-image="public/images/gallery/tenting_bengali_5.jpg">
+            <img class="gallery-image img-fluid" data-number="1" src="public/images/gallery/tenting_bengali_5.jpg" data-detail-image="public/images/gallery/tenting_bengali_5.jpg">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/gallery_lawn_5.jpg" data-detail-image="public/images/gallery/gallery_lawn_5.jpg">
+            <img class="gallery-image img-fluid" data-number="2" src="public/images/gallery/gallery_lawn_5.jpg" data-detail-image="public/images/gallery/gallery_lawn_5.jpg">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_orangewhite_7.jpg" data-detail-image="public/images/gallery/tenting_orangewhite_7.jpg">
+            <img class="gallery-image img-fluid" data-number="3" src="public/images/gallery/tenting_orangewhite_7.jpg" data-detail-image="public/images/gallery/tenting_orangewhite_7.jpg">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/gallery_extra_1.jpg" data-detail-image="public/images/gallery/gallery_extra_1.jpg">
+            <img class="gallery-image img-fluid" data-number="4" src="public/images/gallery/gallery_extra_1.jpg" data-detail-image="public/images/gallery/gallery_extra_1.jpg">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/heading_events_5.jpg" data-detail-image="public/images/gallery/heading_events_5.jpg">
+            <img class="gallery-image img-fluid" data-number="5" src="public/images/gallery/heading_events_5.jpg" data-detail-image="public/images/gallery/heading_events_5.jpg">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_maroongold_4.jpg" data-detail-image="public/images/gallery/tenting_maroongold_4.jpg">
+            <img class="gallery-image img-fluid" data-number="6" src="public/images/gallery/tenting_maroongold_4.jpg" data-detail-image="public/images/gallery/tenting_maroongold_4.jpg">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/lighting_7.jpg" data-detail-image="public/images/gallery/lighting_7.jpg">
+            <img class="gallery-image img-fluid" data-number="7" src="public/images/gallery/lighting_7.jpg" data-detail-image="public/images/gallery/lighting_7.jpg">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_bengali_3.jpg" data-detail-image="public/images/gallery/tenting_bengali_3.jpg">
+            <img class="gallery-image img-fluid" data-number="8" src="public/images/gallery/tenting_bengali_3.jpg" data-detail-image="public/images/gallery/tenting_bengali_3.jpg">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/gallery_tenting_2.JPG" data-detail-image="public/images/gallery/gallery_tenting_2.JPG">
+            <img class="gallery-image img-fluid" data-number="9" src="public/images/gallery/gallery_tenting_2.JPG" data-detail-image="public/images/gallery/gallery_tenting_2.JPG">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_maroongold_11.jpg" data-detail-image="public/images/gallery/tenting_maroongold_11.jpg">
+            <img class="gallery-image img-fluid" data-number="10" src="public/images/gallery/tenting_maroongold_11.jpg" data-detail-image="public/images/gallery/tenting_maroongold_11.jpg">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_maroongold_8.jpg" data-detail-image="public/images/gallery/tenting_maroongold_8.jpg">
+            <img class="gallery-image img-fluid" data-number="11" src="public/images/gallery/tenting_maroongold_8.jpg" data-detail-image="public/images/gallery/tenting_maroongold_8.jpg">
         </div>
         <div class="gallery-item">
-            <img class="gallery-image img-fluid" src="public/images/gallery/tenting_orangewhite_6.jpg" data-detail-image="public/images/gallery/tenting_orangewhite_6.jpg">
+            <img class="gallery-image img-fluid" data-number="12" src="public/images/gallery/tenting_orangewhite_6.jpg" data-detail-image="public/images/gallery/tenting_orangewhite_6.jpg">
         </div>
     </div>
 
@@ -110,7 +110,15 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="gallery-detail-item" style="background-color: #ddd">
-                    <img class="gallery-detail-image img-fluid" alt="  Loading Image..." data-bs-dismiss="modal">
+                    <img class="gallery-detail-image img-fluid" alt="  Loading Image..." >
+                </div>
+                <div class="d-flex align-items-center" style="position:absolute; width:100%; height:100%;">
+                    <span id="gallery-previous-btn">
+                        <i class="gallery-navigation-btn fa fa-arrow-left" style="left: 1px"></i>
+                    </span>
+                    <span  id="gallery-next-btn">
+                        <i class="gallery-navigation-btn fa fa-arrow-right" style="right: 1px;"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -184,11 +192,32 @@
     <script src="public/lib/bootstrap-5.0/js/bootstrap.bundle.min.js" ></script>
     <script src="public/lib/fontawesome-5.15.4/js/all.min.js"></script>
     <script>
+
+        let currentlyOpenDetailImageNumber ;
         $('.gallery-image').click(function(){
             let detailImagePath = $(this).attr('data-detail-image') ;
             $('.gallery-detail-image').attr('src', detailImagePath) ;
             $('#gallery_detail_container').modal('show') ;
+            currentlyOpenDetailImageNumber = $(this).attr('data-number') ;
         }) ;
+
+        $('#gallery-previous-btn').click(function(){
+          console.log(currentlyOpenDetailImageNumber) ;
+
+          let previousImageNumber = currentlyOpenDetailImageNumber == 1 ? 12 : parseInt(currentlyOpenDetailImageNumber)-1 ;
+          let previousImageDetailPath = $(`img[data-number='${previousImageNumber}']`).attr('src') ;
+          $('.gallery-detail-image').attr('src', previousImageDetailPath) ;
+          currentlyOpenDetailImageNumber = previousImageNumber ;
+        }) ;
+
+        $('#gallery-next-btn').click(function(){
+          let nextImageNumber = currentlyOpenDetailImageNumber == 12 ? 1 : parseInt(currentlyOpenDetailImageNumber)+1 ;
+          let nextImageDetailPath = $(`img[data-number='${nextImageNumber}']`).attr('src') ;
+          $('.gallery-detail-image').attr('src', nextImageDetailPath) ;
+          currentlyOpenDetailImageNumber = nextImageNumber ;
+        }) ;
+
+
     </script>
 </body>
 </html>
