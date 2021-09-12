@@ -1,0 +1,27 @@
+.gallery-container{
+  display: grid;
+  grid-template-columns:repeat(3, 1fr) ;
+  grid-gap: 8px;
+
+  padding: 8px;
+}
+.gallery-item{
+  display: flex;               // making individual container as flex, to make the image fill container completely
+  align-content: center;       // this will make the image fill the flex div completely, and make it centered
+
+  background-color: #000;      // this adds a black background behind each image, so when you hover & image opacity is reduced, the image darkens, instead of whitening
+  overflow: hidden;            // this makes sure that any element inside never exceeds the div boundaries . this is useful when we apply the transform:scale(1.1) to child element, and their overflow is hidden
+}
+
+
+.gallery-image{
+  cursor: pointer;
+  object-fit: cover;              // this will zoom the image, to fill the container**/
+  transition: all 500ms ease;    //  makes all transitions like transform or opacity smooth, otherwise they are very abrupt
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+
+}
