@@ -45,3 +45,46 @@
 .modal-open {
   overflow: scroll !important;
 }
+
+
+
+
+$breakpoint-min-xs : 000px ; $breakpoint-max-xs : 575px ;
+$breakpoint-min-sm : 576px ; $breakpoint-max-sm : 767px ;
+$breakpoint-min-md : 768px ; $breakpoint-max-md : 991px ;
+$breakpoint-min-lg : 992px ; $breakpoint-max-lg : 1199px ;
+$breakpoint-min-xl : 1200px ;
+
+
+
+@media only screen and (min-width: $breakpoint-min-xs) and (max-width: $breakpoint-max-xs){
+  .gallery-container{
+    grid-template-columns:repeat(2, 1fr) ;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-min-sm) and (max-width: $breakpoint-max-sm){
+  .gallery-container{
+    grid-template-columns:repeat(2, 1fr) ;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-min-md) and (max-width: $breakpoint-max-md){
+  .gallery-container{
+    grid-template-columns:repeat(3, 1fr) ;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-min-lg) and (max-width: $breakpoint-max-lg){
+  .gallery-container{
+    grid-template-columns:repeat(3, 1fr) ;
+  }
+}
+
+
+@media only screen and (min-width: $breakpoint-min-xl) {
+  .gallery-container{
+    grid-template-columns:repeat(3, 1fr) ;
+  }
+}
+
