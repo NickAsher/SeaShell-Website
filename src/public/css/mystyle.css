@@ -17,6 +17,10 @@
   cursor: pointer;
 }
 
+.header-light ul {
+  padding-left: 0;
+  padding-right: 0;
+}
 .header-light li {
   display: inline;
 }
@@ -36,6 +40,14 @@
   font-size: 150px;
   color: #eee;
   line-height: 1.1;
+}
+
+.my-text-heading {
+  font-size: 1.25rem !important;
+}
+
+.my-text-body {
+  font-size: 1rem !important;
 }
 
 .page-title {
@@ -93,6 +105,14 @@
     font-size: 12px !important;
     padding: 10px 10px !important;
   }
+
+  .my-text-heading {
+    font-size: 1rem !important;
+  }
+
+  .my-text-body {
+    font-size: 0.75rem !important;
+  }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.8px) {
   ul {
@@ -107,6 +127,14 @@
   .my-list-nav a {
     font-size: 14px !important;
     padding: 12px 12px !important;
+  }
+
+  .my-text-heading {
+    font-size: 1.125rem !important;
+  }
+
+  .my-text-body {
+    font-size: 0.875rem !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.8px) {

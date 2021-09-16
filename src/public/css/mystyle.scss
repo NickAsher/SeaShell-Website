@@ -24,6 +24,12 @@
 }
 
 .header-light{
+  ul{
+    padding-left: 0;
+    padding-right: 0;
+    //margin-left: 5%;
+    //margin-right: 5%;
+  }
   li{
     display: inline;
   }
@@ -49,6 +55,13 @@
 }
 
 
+.my-text-heading{
+  font-size: 1.25rem!important;
+}
+
+.my-text-body{
+  font-size: 1rem!important;;
+}
 
 
 
@@ -123,7 +136,13 @@ $breakpoint-min-xl : 1200px ;
   .my-list-nav a{
     font-size: 12px !important;
     padding: 10px 10px  !important;
+  }
 
+  .my-text-heading{
+    font-size: 1rem!important;
+  }
+  .my-text-body{
+    font-size: 0.75rem!important;;
   }
 }
 
@@ -136,7 +155,13 @@ $breakpoint-min-xl : 1200px ;
   .my-list-nav a{
     font-size: 14px !important;
     padding: 12px 12px  !important;
+  }
 
+  .my-text-heading{
+    font-size: 1.125rem!important;
+  }
+  .my-text-body{
+    font-size: 0.875rem!important;;
   }
 }
 
