@@ -1,3 +1,6 @@
+.header ul {
+  padding-left: 0;
+}
 .header li {
   display: inline;
 }
@@ -6,10 +9,11 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 16px;
 }
-.header a:focus, .header a:active, .header a:hover {
+.header li a:focus, .header li a:active, .header li a:hover {
   text-decoration: none;
-  color: #e45f74;
+  color: purple;
   cursor: pointer;
 }
 
@@ -26,6 +30,12 @@
   text-decoration: none;
   color: #e45f74;
   cursor: pointer;
+}
+
+#welcome-text {
+  font-size: 150px;
+  color: #eee;
+  line-height: 1.1;
 }
 
 .page-title {
@@ -67,6 +77,46 @@
 @media only screen and (max-width: 1500px) {
   .page-title.page-title-lg {
     padding: 6rem 0;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575.8px) {
+  ul {
+    overflow: hidden;
+  }
+
+  li[class=my-list-nav]:nth-child(2):before {
+    display: block;
+    content: "";
+  }
+
+  .my-list-nav a {
+    font-size: 12px !important;
+    padding: 10px 10px !important;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.8px) {
+  ul {
+    overflow: hidden;
+  }
+
+  li[class=my-list-nav]:nth-child(2):before {
+    display: block;
+    content: "";
+  }
+
+  .my-list-nav a {
+    font-size: 14px !important;
+    padding: 12px 12px !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.8px) {
+  ul {
+    overflow: hidden;
+  }
+
+  li[class=my-list-nav]:nth-child(2):before {
+    display: block;
+    content: "";
   }
 }
 

@@ -1,19 +1,25 @@
 .header{
+  ul{
+    padding-left: 0;
+    //margin-left: 5%;
+    //margin-right: 5%;
+  }
   li{
     display: inline;
-  }
 
-  li a {
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+    a {
+      color: white;
+      text-align: center;
+      padding: 14px 16px;  // tb rl
+      text-decoration: none;
+      font-size: 16px;
+    }
 
-  a:focus, a:active, a:hover{
-    text-decoration: none;
-    color: #e45f74 ;
-    cursor : pointer;
+    a:focus, a:active, a:hover{
+      text-decoration: none;
+      color: purple ; // #e45f74 ;
+      cursor : pointer;
+    }
   }
 }
 
@@ -34,6 +40,12 @@
     color: #e45f74 ;
     cursor : pointer;
   }
+}
+
+#welcome-text{
+  font-size: 150px;
+  color: #eee;
+  line-height: 1.1;
 }
 
 
@@ -93,6 +105,55 @@
 
 
 
+
+
+$breakpoint-min-xs : 000px ; $breakpoint-max-xs : 575.8px ;
+$breakpoint-min-sm : 576px ; $breakpoint-max-sm : 767.8px ;
+$breakpoint-min-md : 768px ; $breakpoint-max-md : 991.8px ;
+$breakpoint-min-lg : 992px ; $breakpoint-max-lg : 1199.8px ;
+$breakpoint-min-xl : 1200px ;
+
+
+@media only screen and (min-width: $breakpoint-min-xs) and (max-width: $breakpoint-max-xs){
+  //this breaks the top navbar in two parts after Sea-Shell heading
+  ul {overflow: hidden;}
+  li[class='my-list-nav']:nth-child(2):before {display: block; content: '';}
+
+  // makes the navbar list items smaller in size
+  .my-list-nav a{
+    font-size: 12px !important;
+    padding: 10px 10px  !important;
+
+  }
+}
+
+@media only screen and (min-width: $breakpoint-min-sm) and (max-width: $breakpoint-max-sm){
+  //this breaks the top navbar in two parts after Sea-Shell heading
+  ul {overflow: hidden;}
+  li[class='my-list-nav']:nth-child(2):before {display: block; content: '';}
+
+  // makes the navbar list items smaller in size
+  .my-list-nav a{
+    font-size: 14px !important;
+    padding: 12px 12px  !important;
+
+  }
+}
+
+@media only screen and (min-width: $breakpoint-min-md) and (max-width: $breakpoint-max-md){
+  //this breaks the top navbar in two parts after Sea-Shell heading
+  ul {overflow: hidden;}
+  li[class='my-list-nav']:nth-child(2):before {display: block; content: '';}
+}
+
+@media only screen and (min-width: $breakpoint-min-lg) and (max-width: $breakpoint-max-lg){
+
+}
+
+
+@media only screen and (min-width: $breakpoint-min-xl) {
+
+}
 
 
 
