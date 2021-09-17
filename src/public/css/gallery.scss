@@ -60,18 +60,24 @@ $breakpoint-min-xl : 1200px ;
 @media only screen and (min-width: $breakpoint-min-xs) and (max-width: $breakpoint-max-xs){
   .gallery-container{
     grid-template-columns:repeat(2, 1fr) ;
+    grid-gap: 4px;
+    padding: 4px;
   }
 }
 
 @media only screen and (min-width: $breakpoint-min-sm) and (max-width: $breakpoint-max-sm){
   .gallery-container{
     grid-template-columns:repeat(2, 1fr) ;
+    grid-gap: 4px;
+    padding: 4px;
   }
 }
 
 @media only screen and (min-width: $breakpoint-min-md) and (max-width: $breakpoint-max-md){
   .gallery-container{
     grid-template-columns:repeat(3, 1fr) ;
+    grid-gap: 4px;
+    padding: 4px;
   }
 }
 
