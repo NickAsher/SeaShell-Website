@@ -22,6 +22,16 @@
   opacity: 0.5;
 }
 
+.gallery-detail-item {
+  display: flex;
+  align-content: center;
+}
+
+.gallery-detail-image {
+  object-fit: cover;
+  width: 100%;
+}
+
 .gallery-navigation-btn {
   position: absolute;
   color: #fff;

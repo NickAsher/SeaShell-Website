@@ -13,7 +13,6 @@
   overflow: hidden;            // this makes sure that any element inside never exceeds the div boundaries . this is useful when we apply the transform:scale(1.1) to child element, and their overflow is hidden
 }
 
-
 .gallery-image{
   cursor: pointer;
   object-fit: cover;              // this will zoom the image, to fill the container**/
@@ -24,6 +23,15 @@
     opacity: 0.5;
   }
 
+}
+
+.gallery-detail-item{
+  display: flex;               // making individual container as flex, to make the image fill container completely
+  align-content: center;       // this will make the image fill the flex div completely, and make it centered
+}
+.gallery-detail-image{
+  object-fit: cover;              // this will zoom the image, to fill the container**/
+  width: 100%;
 }
 
 
