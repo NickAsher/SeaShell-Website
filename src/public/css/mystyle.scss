@@ -17,7 +17,7 @@
 
     a:focus, a:active, a:hover{
       text-decoration: none;
-      color: purple ; // #e45f74 ;
+      color: #daa520 ;
       cursor : pointer;
     }
   }
@@ -138,6 +138,9 @@ $breakpoint-min-xl : 1200px ;
     padding: 10px 10px  !important;
   }
 
+  #welcome-text{
+    font-size: 80px;
+  }
   .my-text-heading{
     font-size: 1rem!important;
   }
@@ -157,6 +160,9 @@ $breakpoint-min-xl : 1200px ;
     padding: 12px 12px  !important;
   }
 
+  #welcome-text{
+    font-size: 95px;
+  }
   .my-text-heading{
     font-size: 1.125rem!important;
   }
@@ -169,10 +175,16 @@ $breakpoint-min-xl : 1200px ;
   //this breaks the top navbar in two parts after Sea-Shell heading
   ul {overflow: hidden;}
   li[class='my-list-nav']:nth-child(2):before {display: block; content: '';}
+
+  #welcome-text{
+    font-size: 110px;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-min-lg) and (max-width: $breakpoint-max-lg){
-
+  #welcome-text{
+    font-size: 130px;
+  }
 }
 
 

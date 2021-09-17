@@ -82,7 +82,7 @@ a, button {
 
 a:focus, a:active, a:hover, button:focus, button:active, button:hover, a b.light-color:hover {
     text-decoration: none;
-    color: #e45f74
+    color: #daa520 ; //#e45f74
 }
 
 b {

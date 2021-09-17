@@ -13,7 +13,7 @@
 }
 .header li a:focus, .header li a:active, .header li a:hover {
   text-decoration: none;
-  color: purple;
+  color: #daa520;
   cursor: pointer;
 }
 
@@ -106,6 +106,10 @@
     padding: 10px 10px !important;
   }
 
+  #welcome-text {
+    font-size: 80px;
+  }
+
   .my-text-heading {
     font-size: 1rem !important;
   }
@@ -129,6 +133,10 @@
     padding: 12px 12px !important;
   }
 
+  #welcome-text {
+    font-size: 95px;
+  }
+
   .my-text-heading {
     font-size: 1.125rem !important;
   }
@@ -145,6 +153,15 @@
   li[class=my-list-nav]:nth-child(2):before {
     display: block;
     content: "";
+  }
+
+  #welcome-text {
+    font-size: 110px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.8px) {
+  #welcome-text {
+    font-size: 130px;
   }
 }
 
