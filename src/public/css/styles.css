@@ -2,9 +2,9 @@
 
 html {
     font-size: 100%;
-    height: 100%;
+    /*height: 100%;*/
     width: 100%;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     margin: 0;
     padding: 0;
     touch-action: manipulation
@@ -14,13 +14,13 @@ body {
     font-size: 16px;
     font-family: open sans, sans-serif;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     margin: 0;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     word-wrap: break-word;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     color: #333
 }
 
@@ -238,7 +238,7 @@ b.light-color {
     margin: 0 10px;
     padding-bottom: 7px;
     position: relative;
-    overflow: hidden
+    /*overflow: hidden*/
 }
 
 .main-area .social-btn>li>a:after {

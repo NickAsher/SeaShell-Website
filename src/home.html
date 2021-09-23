@@ -92,7 +92,7 @@
             </div>
         </div>
 
-        <div class="text-white center-text" style="bottom: 40px;position: relative">
+        <div class="text-white center-text fadeScroll" style="bottom: 40px;position: relative">
             Down
             <div id="animation-text" class="center-text " >
                 <i class="fa fa-arrow-down"></i>
@@ -245,9 +245,23 @@
       gtag('js', new Date());
       gtag('config', 'G-6J3LV4GMJD');
 
-      $( window ).scroll(function() {
-        console.log("scrolled") ;
+
+
+      $(window).scroll(function() {
+
+        // var scrollPercent = 100 * $(window).scrollTop() / ($('#welcome-text').height() - $(window).height());
+        // console.log(scrollPercent) ;
+
+        var target = $('.fadeScroll');
+        var targetHeight = target.outerHeight();
+        var scrollPercent = (targetHeight - window.scrollY) / targetHeight;
+        if (scrollPercent >= 0) {
+          target.css('opacity', scrollPercent);
+        } else {
+          target.css('opacity', 0);
+        }
       });
+
     </script>
 </body>
 </html>
