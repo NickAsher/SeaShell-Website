@@ -30,12 +30,13 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-.header-light a:focus, .header-light a:active, .header-light a:hover {
+.header-light li a:focus, .header-light li a:active, .header-light li a:hover {
   text-decoration: none;
-  color: #e45f74;
+  color: #daa520;
   cursor: pointer;
 }
 
+/* ------------------------------ */
 #welcome-text {
   font-size: 150px;
   color: #eee;
@@ -50,6 +51,41 @@
   font-size: 1rem !important;
 }
 
+@font-face {
+  font-family: "Melany Lane";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/melany_lane_bold.otf");
+}
+.font-melany-lane {
+  font-family: "Melany Lane";
+}
+
+/* divider */
+/* ------------------------------ */
+.rfg-spacer-single {
+  width: 100%;
+  height: 30px;
+  display: block;
+  clear: both;
+}
+
+.rfg-spacer-double {
+  width: 100%;
+  height: 60px;
+  display: block;
+  clear: both;
+}
+
+.rfg-spacer-half {
+  width: 100%;
+  height: 15px;
+  display: block;
+  clear: both;
+}
+
+/* Page Parallax Title */
+/* ------------------------------ */
 .page-title {
   position: relative;
   padding: 6rem 0 7rem;

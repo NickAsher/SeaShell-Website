@@ -1,8 +1,6 @@
 .header{
   ul{
     padding-left: 0;
-    //margin-left: 5%;
-    //margin-right: 5%;
   }
   li{
     display: inline;
@@ -14,7 +12,6 @@
       text-decoration: none;
       font-size: 16px;
     }
-
     a:focus, a:active, a:hover{
       text-decoration: none;
       color: #daa520 ;
@@ -23,37 +20,35 @@
   }
 }
 
-.header-light{
-  ul{
+.header-light {
+  ul {
     padding-left: 0;
     padding-right: 0;
-    //margin-left: 5%;
-    //margin-right: 5%;
   }
-  li{
+  li {
     display: inline;
-  }
 
-  li a {
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  a:focus, a:active, a:hover{
-    text-decoration: none;
-    color: #e45f74 ;
-    cursor : pointer;
+    a {
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    a:focus, a:active, a:hover {
+      text-decoration: none;
+      color: #daa520;
+      cursor: pointer;
+    }
   }
 }
 
+
+/* ------------------------------ */
 #welcome-text{
   font-size: 150px;
   color: #eee;
   line-height: 1.1;
 }
-
 
 .my-text-heading{
   font-size: 1.25rem!important;
@@ -63,8 +58,44 @@
   font-size: 1rem!important;;
 }
 
+@font-face {
+  font-family: 'Melany Lane';
+  font-style: normal;
+  font-weight: normal;
+  src:  url('../fonts/melany_lane_bold.otf') ;
+}
+
+.font-melany-lane{
+  font-family: 'Melany Lane';
+}
 
 
+/* divider */
+/* ------------------------------ */
+.rfg-spacer-single {
+  width: 100%;
+  height: 30px;
+  display: block;
+  clear: both;
+}
+.rfg-spacer-double {
+  width: 100%;
+  height: 60px;
+  display: block;
+  clear: both;
+}
+.rfg-spacer-half {
+  width: 100%;
+  height: 15px;
+  display: block;
+  clear: both;
+}
+
+
+
+
+/* Page Parallax Title */
+/* ------------------------------ */
 .page-title{
 
   position: relative;
@@ -82,7 +113,7 @@
 
 }
 
-
+//This sets up a darker scrim layout behind the div
 .page-title:after {
   content: '';
   position: absolute;
@@ -120,6 +151,9 @@
 
 
 
+
+
+
 $breakpoint-min-xs : 000px ; $breakpoint-max-xs : 575.8px ;
 $breakpoint-min-sm : 576px ; $breakpoint-max-sm : 767.8px ;
 $breakpoint-min-md : 768px ; $breakpoint-max-md : 991.8px ;
@@ -149,6 +183,7 @@ $breakpoint-min-xl : 1200px ;
   }
 }
 
+
 @media only screen and (min-width: $breakpoint-min-sm) and (max-width: $breakpoint-max-sm){
   //this breaks the top navbar in two parts after Sea-Shell heading
   ul {overflow: hidden;}
@@ -171,6 +206,7 @@ $breakpoint-min-xl : 1200px ;
   }
 }
 
+
 @media only screen and (min-width: $breakpoint-min-md) and (max-width: $breakpoint-max-md){
   //this breaks the top navbar in two parts after Sea-Shell heading
   ul {overflow: hidden;}
@@ -181,6 +217,7 @@ $breakpoint-min-xl : 1200px ;
   }
 }
 
+
 @media only screen and (min-width: $breakpoint-min-lg) and (max-width: $breakpoint-max-lg){
   #welcome-text{
     font-size: 130px;
@@ -188,9 +225,7 @@ $breakpoint-min-xl : 1200px ;
 }
 
 
-@media only screen and (min-width: $breakpoint-min-xl) {
-
-}
+@media only screen and (min-width: $breakpoint-min-xl) {}
 
 
 
