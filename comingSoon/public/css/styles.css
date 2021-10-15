@@ -190,11 +190,12 @@ b.light-color {
     height: 100vh;
     z-index: 1;
     padding: 0 20px;
-    background-size: cover;
     color: #fff ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    background-size: cover;
+
 }
 
 .main-area:after {

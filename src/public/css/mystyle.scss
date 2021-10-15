@@ -59,14 +59,19 @@
 }
 
 @font-face {
-  font-family: 'Melany Lane';
+  font-family: 'Melany_Lane';
   font-style: normal;
   font-weight: normal;
-  src:  url('../fonts/melany_lane_bold.otf') ;
+  //src:  url('../fonts/melany_lane_bold.woff2') ;
+  //src:  url('https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/fonts/melany_lane_bold.woff2') format("woff2");
+  src:  url('https://seashellresorts.com/font.woff2') format("woff2"), url('https://www.seashellresorts.com/font.woff2') format("woff2");
+
 }
 
 .font-melany-lane{
-  font-family: 'Melany Lane';
+  font-family: 'Melany_Lane', cursive;
+
+  //font-family: 'Lovers Quarrel', cursive;
 }
 
 
