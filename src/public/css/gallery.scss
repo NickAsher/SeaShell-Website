@@ -57,6 +57,9 @@
 
 
 
+
+/********************** Width Specific Code for Responsiveness *****************/
+
 $breakpoint-min-xs : 000px ; $breakpoint-max-xs : 575px ;
 $breakpoint-min-sm : 576px ; $breakpoint-max-sm : 767px ;
 $breakpoint-min-md : 768px ; $breakpoint-max-md : 991px ;
@@ -102,3 +105,32 @@ $breakpoint-min-xl : 1200px ;
   }
 }
 
+
+
+
+
+/* ************************** Browser Specific Code *******************/
+
+
+
+/* This code works only on Safari 11+ */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+
+  // There is an error in safari that causes images to stretch beyond their container bounds in flex.  https://stackoverflow.com/questions/57516373
+  // So in safari browsers you can't really have full "zoomed-in" gallery images. You are going to have the black bars. No way around it
+  // so this is a fix, so that you images are not stretched
+  .gallery-item{
+    align-items: flex-start;
+  }
+
+  .gallery-image{
+    align-self: center; //this centers yours black bars, otherwise they appear on bottom
+  }
+
+  .gallery-detail-item{
+    align-items: flex-start;   //this solves the stretchin problems, no problem of black bar in detail image, since there is no container to fill
+  }
+
+
+}}

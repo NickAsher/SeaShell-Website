@@ -50,6 +50,7 @@
   overflow: scroll !important;
 }
 
+/********************** Width Specific Code for Responsiveness *****************/
 @media only screen and (min-width: 0px) and (max-width: 575px) {
   .gallery-container {
     grid-template-columns: repeat(2, 1fr);
@@ -79,6 +80,23 @@
 @media only screen and (min-width: 1200px) {
   .gallery-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* ************************** Browser Specific Code *******************/
+/* This code works only on Safari 11+ */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .gallery-item {
+      align-items: flex-start;
+    }
+
+    .gallery-image {
+      align-self: center;
+    }
+
+    .gallery-detail-item {
+      align-items: flex-start;
+    }
   }
 }
 
