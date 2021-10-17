@@ -87,7 +87,6 @@
 /* Page Parallax Title */
 /* ------------------------------ */
 .page-title {
-  position: relative;
   padding: 6rem 0 7rem;
   opacity: 0.9;
   background-position: center;
@@ -95,6 +94,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #fff;
+  -webkit-background-size: cover;
+  align-items: flex-start;
 }
 
 .page-title:after {
