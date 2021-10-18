@@ -148,6 +148,52 @@
 }
 
 
+.lt-FullScreenLayout{
+  position: relative;    /*the position:relative does not have any effect on elements inside this div. It means position as in respect to overall html elements. */
+
+  /*The 6 properties below, make it a full screen element*/
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+
+  z-index: 1;
+
+  /*Making it a display flex container, simply means that items inside this container are contained inside it, and do not leak outside the container. The display properties does not have any effect on actual positioning/bounds of container itself*/
+  display: flex;
+  align-content: center;
+}
+
+.lt-FrameLayout{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-content: center;
+}
+
+/*This applies to all the children of the lt-FrameLayout (does not apply to grandchildren, only direct children)*/
+.lt-FrameLayout > div{
+  position: absolute;  /* basically makes them framelayoutable, and not care about other direct-children of the FrameLaout. */
+}
+
+.lt-RelativeLayout{
+  height: 100%;
+  width: 100%;
+
+}
+
+
+
+.image-full-width{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 
 

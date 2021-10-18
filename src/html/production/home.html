@@ -11,11 +11,12 @@
     <link rel="shortcut icon" href="https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/images/ic_shell.png">
     <link rel="apple-touch-icon" href="https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/images/ic_shell.png">
 
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/css/theme.css" rel="stylesheet">
     <link href="https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/css/mystyle.css" rel="stylesheet">
+    <link href="https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/css/gallery.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +27,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
 
     <style>
+
+        html, body{
+            height: 100%;
+        }
+
         #animation-text{
             animation: MoveUpDown 0.8s linear infinite;
             position: relative;
@@ -42,6 +48,53 @@
                 transform: translateY(-8px);
             }
         }
+
+        .lt-FullScreenLayout{
+            position: relative;    /*the position:relative does not have any effect on elements inside this div. It means position as in respect to overall html elements. */
+
+            /*The 6 properties below, make it a full screen element*/
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+
+            z-index: 1;
+
+            /*Making it a display flex container, simply means that items inside this container are contained inside it, and do not leak outside the container. The display properties does not have any effect on actual positioning/bounds of container itself*/
+            display: flex;
+            align-content: center;
+        }
+
+        .lt-FrameLayout{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            align-content: center;
+        }
+
+        /*This applies to all the children of the lt-FrameLayout (does not apply to grandchildren, only direct children)*/
+        .lt-FrameLayout > div{
+            position: absolute;  /* basically makes them framelayoutable, and not care about other direct-children of the FrameLaout. */
+        }
+
+        .lt-RelativeLayout{
+            height: 100%;
+            width: 100%;
+
+        }
+
+
+
+        .image-full-width{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
     </style>
 
 </head>
@@ -49,68 +102,67 @@
 
 
 
+    <div class="lt-FullScreenLayout center-text">
 
-    <div class="main-area center-text d-flex flex-column" style="background-image:url(https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/images/gallery/2.jpg) !important;  ">
-        <div class="header">
-            <ul>
-                <li class="my-list-nav">
+        <div class="lt-FrameLayout" style="background: #000">
+
+            <img class="image-full-width img-fluid" src="https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/images/gallery/2.jpg" style="opacity: 0.5;">
+
+            <div class="lt-RelativeLayout" >
+                <!--This is a normal div which is kind of like RelativeLayout. -->
+                <div class="header">
+                    <ul>
+                        <li class="my-list-nav">
                     <span class="font-white font-melany-lane" style="font-size: 50px !important; ">
                         Sea Shell Resorts
                     </span>
-                </li>
-                <li class="my-list-nav">
-                    <a href="#">
-                        Home
-                    </a>
-                </li>
-                <li class="my-list-nav">
-                    <a href="/gallery">
-                    Gallery
-                    </a>
-                </li>
-                <li class="my-list-nav">
-                    <a href="/about">
-                    About Us
-                    </a>
-                </li>
-                <li class="my-list-nav">
-                    <a href="pelican">
-                    The Pelican
-                    </a>
-                </li>
-                <li class="my-list-nav">
-                    <a href="#footer">
-                    Contact
-                    </a>
-                </li>
-            </ul>
-        </div>
+                        </li>
+                        <li class="my-list-nav">
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="my-list-nav">
+                            <a href="/gallery">
+                                Gallery
+                            </a>
+                        </li>
+                        <li class="my-list-nav">
+                            <a href="/about">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="my-list-nav">
+                            <a href="pelican">
+                                The Pelican
+                            </a>
+                        </li>
+                        <li class="my-list-nav">
+                            <a href="#footer">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-
-
-        <div class="display-table">
-            <div class="display-table-cell">
-                <h1 id="welcome-text" class=" title font-white font-melany-lane fadeScroll">
+                <h1 id="welcome-text" class=" title font-white font-melany-lane fadeScroll" style="top:40%; position: absolute; left: 0; right: 0">
                     <b>Welcome</b>
                 </h1>
 
+                <div class="text-white center-text fadeScroll" style="bottom: 40px;position: absolute; left: 0; right: 0">
+                    Down
+                    <div id="animation-text" class="center-text" style="background: none" >
+                        <i class="fa fa-arrow-down"></i>
+                    </div>
+                </div>
             </div>
+
+
+
         </div>
-
-        <div class="text-white center-text fadeScroll" style="bottom: 40px;position: relative">
-            Down
-            <div id="animation-text" class="center-text " >
-                <i class="fa fa-arrow-down"></i>
-            </div>
-        </div>
-
-
     </div>
 
-
-
-
-
+    
 
     <!-- section begin -->
     <section id="section-about">
@@ -246,20 +298,20 @@
 
 
 
-      $(window).scroll(function() {
-
-        // var scrollPercent = 100 * $(window).scrollTop() / ($('#welcome-text').height() - $(window).height());
-        // console.log(scrollPercent) ;
-
-        var target = $('.fadeScroll');
-        var targetHeight = target.outerHeight();
-        var scrollPercent = (targetHeight - window.scrollY) / targetHeight;
-        if (scrollPercent >= 0) {
-          target.css('opacity', scrollPercent);
-        } else {
-          target.css('opacity', 0);
-        }
-      });
+      // $(window).scroll(function() {
+      //
+      //   // var scrollPercent = 100 * $(window).scrollTop() / ($('#welcome-text').height() - $(window).height());
+      //   // console.log(scrollPercent) ;
+      //
+      //   var target = $('.fadeScroll');
+      //   var targetHeight = target.outerHeight();
+      //   var scrollPercent = (targetHeight - window.scrollY) / targetHeight;
+      //   if (scrollPercent >= 0) {
+      //     target.css('opacity', scrollPercent);
+      //   } else {
+      //     target.css('opacity', 0);
+      //   }
+      // });
 
     </script>
 </body>
