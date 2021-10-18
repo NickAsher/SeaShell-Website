@@ -49,52 +49,6 @@
             }
         }
 
-        .rfg-FullScreenLayout{
-            position: relative;    /*the position:relative does not have any effect on elements inside this div. It means position as in respect to overall html elements. */
-
-            /*The 6 properties below, make it a full screen element*/
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            height: 100%;
-            width: 100%;
-
-            z-index: 1;
-
-            /*Making it a display flex container, simply means that items inside this container are contained inside it, and do not leak outside the container. The display properties does not have any effect on actual positioning/bounds of container itself*/
-            display: flex;
-            align-content: center;
-        }
-
-        .rfg-FrameLayout{
-            position: absolute;
-            height: 100%;
-            width: 100%;
-
-            display: flex;
-            align-content: center;
-        }
-
-        /*This applies to all the children of the lt-FrameLayout (does not apply to grandchildren, only direct children)*/
-        .rfg-FrameLayout > div{
-            position: absolute;  /* basically makes them framelayoutable, and not care about other direct-children of the FrameLaout. */
-        }
-
-        .rfg-RelativeLayout{
-            height: 100%;
-            width: 100%;
-
-        }
-
-
-
-        .rfg-image-full-width{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
     </style>
 
 </head>
@@ -102,13 +56,13 @@
 
 
 
-    <div class="lt-FullScreenLayout center-text">
+    <div class="rfg-FullScreenLayout center-text">
 
-        <div class="lt-FrameLayout" style="background: #000">
+        <div class="rfg-FrameLayout" style="background: #000">
 
-            <img class="image-full-width img-fluid" src="https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/images/gallery/2.jpg" style="opacity: 0.5;">
+            <img class="rfg-image-full-width img-fluid" src="https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/images/gallery/2.jpg" style="opacity: 0.5;">
 
-            <div class="lt-RelativeLayout" >
+            <div class="rfg-RelativeLayout" >
                 <!--This is a normal div which is kind of like RelativeLayout. -->
                 <div class="header">
                     <ul>
