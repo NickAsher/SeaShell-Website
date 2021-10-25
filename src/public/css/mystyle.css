@@ -55,10 +55,20 @@
   font-family: "Melany_Lane";
   font-style: normal;
   font-weight: normal;
-  src: url("https://seashellresorts.com/font.woff2") format("woff2"), url("https://www.seashellresorts.com/font.woff2") format("woff2"), url("../fonts/melany_lane_bold.woff2") format("woff2");
+  src: url("https://seashellresorts.com/font2.woff2") format("woff2"), url("https://www.seashellresorts.com/font2.woff2") format("woff2"), url("../fonts/melany_lane_bold.woff2") format("woff2");
 }
 .font-melany-lane {
   font-family: "Melany_Lane", cursive;
+}
+
+@font-face {
+  font-family: "MV_Boli";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://seashellresorts.com/font.ttf"), url("https://www.seashellresorts.com/font.ttf"), url("../fonts/mvboli.ttf");
+}
+.font-mv-boli {
+  font-family: "MV_Boli", cursive;
 }
 
 /* divider */
