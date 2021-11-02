@@ -164,13 +164,13 @@
   position: relative;
   padding: 6rem 0 7rem ;  //this sets up the dimensions of the div
   //z-index: 1;
-  opacity: 0.9;    // to reduce the opacity of image
+  opacity: 0.95;    // to reduce the opacity of image
 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #fff;
+  background-color: #000;
 }
 
 //This sets up a darker scrim layout behind the div

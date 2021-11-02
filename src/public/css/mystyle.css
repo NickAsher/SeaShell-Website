@@ -135,12 +135,12 @@
 .page-title {
   position: relative;
   padding: 6rem 0 7rem;
-  opacity: 0.9;
+  opacity: 0.95;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #fff;
+  background-color: #000;
 }
 
 .page-title:after {
