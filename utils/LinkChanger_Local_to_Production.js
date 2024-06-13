@@ -33,7 +33,7 @@ const createProductionFileFromLocalFile = (inputFilePath, outputFilePath)=>{
   let newData = data.replaceAll(`../../public/lib/jquery/`, `https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/`) ;
   newData = newData.replaceAll(`../../public/lib/bootstrap-5.0/`, `https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/`) ;
   newData = newData.replaceAll(`../../public/lib/fontawesome-5.15.4/`, `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/`) ;
-  newData = newData.replaceAll(`../../public/`, `https://s3.ap-south-1.amazonaws.com/www.seashellresorts/src/public/`) ;
+  newData = newData.replaceAll(`../../public/`, `https://2022-seashell-in.s3.ap-south-1.amazonaws.com/src/public/`) ;
 
 
   newData = newData.replaceAll(`<a href="home.html">`,     `<a href="/">`) ;

@@ -16,40 +16,13 @@
 
     <link href="../../public/css/theme.css" rel="stylesheet">
     <link href="../../public/css/mystyle.css" rel="stylesheet">
-    <link href="../../public/css/gallery.css" rel="stylesheet">
+    <link href="../../public/css/home.css" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap" rel="stylesheet">
 
     <script src="../../public/lib/jquery/jquery.min.js"></script>
     <script src="../../public/lib/fontawesome-5.15.4/js/all.min.js"></script>
     <script src="../../public/lib/bootstrap-5.0/js/bootstrap.min.js"></script>
 
-    <style>
-
-        html, body{
-            height: 100%;
-        }
-
-        #animation-text{
-            animation: MoveUpDown 0.8s linear infinite;
-            position: relative;
-            bottom: 0;
-            padding-top: 8px;
-            /*position: center;*/
-        }
-
-        @keyframes MoveUpDown {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-    </style>
 
 </head>
 <body>
@@ -57,7 +30,6 @@
 
 
     <div class="rfg-FullScreenLayout center-text">
-
         <div class="rfg-FrameLayout" style="background: #000">
 
             <img class="rfg-image-full-width img-fluid" src="../../public/images/gallery/2.jpg" style="opacity: 0.5;">
@@ -67,9 +39,7 @@
                 <div class="header">
                     <ul>
                         <li class="my-list-nav">
-                            <span class="font-white font-mv-boli" style="font-size: 30px !important; ">
-                                Sea Shell Resorts
-                            </span>
+                            <!--This is intentionally left empty, because i break my ul-list on mobile after the first element-->
                         </li>
                         <li class="my-list-nav">
                             <a href="#">
@@ -99,13 +69,20 @@
                     </ul>
                 </div>
 
-                <h3 id="welcome-text" class=" title font-white font-mv-boli fadeScroll" style="top:40%; position: absolute; left: 0; right: 0">
-                    <b>Welcome</b>
-                </h3>
+                <div id="headingContainer" style="top:40%; position: absolute; left: 0; right: 0">
+                    <div id="subHeadingTextContainer" class="h4">
+                        <span>Welcome to</span>
+                    </div>
+                    <h1 id="headingTextContainer">
+                        <span>Sea</span>
+                        <span>Shell</span>
+                        <span>Resort</span>
+                    </h1>
+                </div>
 
-                <div class="text-white center-text fadeScroll" style="bottom: 40px;position: absolute; left: 0; right: 0">
+                <div id="BottomTextContainer"  class="center-text" style="bottom: 40px;position: absolute; left: 0; right: 0">
                     Down
-                    <div id="animation-text" class="center-text" style="background: none" >
+                    <div id="downAnimationTextArrow" class="center-text" style="background: none" >
                         <i class="fa fa-arrow-down"></i>
                     </div>
                 </div>
@@ -129,7 +106,7 @@
                     <div class="small-border"></div>
                     <img src="../../public/images/icons/004-wedding-rings.png" width="64px">
                     <p class="my-text-heading lead">
-                        At the Sea Shell resort, nature measures time with picturesque sunrises, reflections of light shining through the boughs of the park plane trees, with the singing of birds and the chirping of crickets. Shrouded in greenery, this palace with phenomenal architecture and stylish interiors, delights its guests with comfort, modern punjabi culinary fantasies and professional service.
+                        At the Sea Shell resort, nature measures time with picturesque sunrises, reflections of light shining through the boughs of the park plane trees, with the singing of birds and the chirping of crickets. Shrouded in greenery, this palace with phenomenal architecture and stylish interiors, delights its guests with comfort, modern culinary fantasies and professional service.
                     </p>
                 </div>
 
@@ -138,14 +115,14 @@
                 <div class="col-md-6">
                     <img src="../../public/images/icons/001-wedding-arch.png" width="64px">
                     <h4>Wedding Venues</h4>
-                    <p class="my-text-body px-md-5 px-2">The 2 prime venues are the “Sea Shell" and the “Pelican”. Sea Shell Banquet Hall, our largest hall, with it's elegant decor in subtle tones of white and grey, complete with floor-to-ceiling windows, with a capacity of up to 600 guests is best suited for Big Fat Punjabi Wedding. Pelican Banquet Hall, which can accommodate 450 guests at a time, is an ideal place to host a more intimate gathering.
+                    <p class="my-text-body px-md-5 px-2">The 2 prime venues are the “Sea Shell" and the “Pelican”. Sea Shell Banquet Hall, our largest hall, with it's elegant decor in subtle tones of white and grey, complete with floor-to-ceiling windows, with a capacity of up to 800 guests is best suited for Big Fat Indian Wedding. Pelican Banquet Hall, which can accommodate 450 guests at a time, is an ideal place to host a more intimate gathering.
                 </div>
 
 
                 <div class="col-md-6">
                     <img src="../../public/images/icons/014-banquet-table.png" width="64px">
                     <h4>Catering</h4>
-                    <p class="my-text-body px-md-5 px-2">We know well, how important food and drinks are, in a Punjabi wedding ceremony. Our team of chefs and food decorators have over a decade of experience. With an exclusive set of dishes, comprising of International and Local cuisines, we'll help you create a customised menu, according to your specific needs, whether it is an intimate wedding ceremony or a Grand Reception.
+                    <p class="my-text-body px-md-5 px-2">We know well, how important food and drinks are, in an Indian wedding ceremony. Our team of chefs and food decorators have over a decade of experience. With an exclusive set of dishes, comprising of International and Local cuisines, we'll help you create a customised menu, according to your specific needs, whether it is an intimate wedding ceremony or a Grand Reception.
                     </p>
                 </div>
 
@@ -227,13 +204,12 @@
         <br>
         <div  style="display:flex; flex-direction:column; align-items:center; ">
             <div style="display:flex; flex-direction:row; align-items:center;">
-                <img src="../../public/images/ic_shell.png"  class="px-3"  width="156">
-                <span class="font-white font-mv-boli " style="font-size: 50px; line-height: 1.1">
-                        Sea Shell <br> Resorts
+                <img src="../../public/images/ic_shell3.png"  class="px-3"  width="128">
+                <span class="font-white  " style="font-size: 36px; line-height: 1.1">
+                        Sea Shell <br> Resort
                     </span>
             </div>
             <div class="rfg-spacer-half"></div>
-            <h5 class="text-muted">&copy 2021 SeaShell Resorts</h5>
             <h6 class="text-white">Designed by Rafique Gagneja </h6>
         </div>
         <br>
