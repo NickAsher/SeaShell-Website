@@ -1,0 +1,11 @@
+A1. Firstly transfer the files from public folder (CSS & Images) to your S3 Directory and make sure they are ACL=PublicReadable
+A2. Now take your address from S3 and put it into LInkChanger Script
+A3. Run the LinkChanger Script so that, you now have public html files
+A4. Upload the public HTML files to S3.
+A5. Run each html page individually from S3 https address. (You cannot navigate between html pages yet)
+
+B1. Go to your Domain Records and point it towards your ec2 ip address
+B2. SSH to your EC2 container using keypair. Use you WSL Linux for this. Install and run nginx on your server if you haven't.
+B3. Put your nginx configuration and restart the nginx
+B4. Check that http of your site runs
+B5. Setup SSL using certbot
